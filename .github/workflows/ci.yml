@@ -27,7 +27,7 @@ jobs:
         run: mvn clean install
 
       - name: Run tests
-        run: mvn test || true
+        run: mvn test -e -X || true
 
       - name: Archive test results
         if: always()
