@@ -28,6 +28,8 @@ jobs:
 
       - name: Run tests
         run: mvn test -e -X || true
+      - name: Display Surefire reports
+        run: cat /home/runner/work/QA_AUTOMATION/QA_AUTOMATION/target/surefire-reports/*.txt || true
 
       - name: Archive test results
         if: always()
